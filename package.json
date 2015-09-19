@@ -7,5 +7,8 @@
     "test": "mocha --harmony test/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pario-monad": "git+https://github.com/TCooper8/pario-monad.git#develop"
+  }
 }

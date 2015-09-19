@@ -1,5 +1,6 @@
 'use strict'
 
+let Assert = require('assert')
 let Match = require('./lib/index.js')
 let option = require('pario-monad').option
 let _ = require('lodash')
@@ -33,6 +34,20 @@ let sum2 = ls => fold
   (acc => i => acc + i)
   (0)(ls)
 
+let getId = Match()
+  .get('name')( name => console.log('Name = %s', name) )
+  .get('id')( id => console.log('Id = %s', id) )
+  .bind
+
+let matchEmpty = Match()
+  .empty( ls => ls )
+  .bind
+
+Assert.deepEqual(matchEmpty([]), [])
+
 console.log(matchNumber(50))
 console.log(sum(_.range(1000)))
 console.log(sum2(_.range(1000)))
+
+getId({ name: 'John' })
+getId({ id: '117'})

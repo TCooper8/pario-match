@@ -51,3 +51,7 @@ console.log(sum2(_.range(1000)))
 
 getId({ name: 'John' })
 getId({ id: '117'})
+
+let login = Match()
+  .regex(/^username = (/s+) password = (\s+)$/g)( (username, password) => handleUsername(username, password) )
+  .regex(/^token = (/s+)$/g)( token => handleToken(token) )

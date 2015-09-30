@@ -25,6 +25,8 @@ describe('Should test matching', () => {
       .else( 5 )
       .bind
 
+    f('hello')
+
 
     timed(100)( () => f(5) )
   })

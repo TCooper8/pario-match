@@ -2,7 +2,7 @@
   "name": "pario-match",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha --harmony test/"
   },
@@ -10,5 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "pario-monad": "git+https://github.com/TCooper8/pario-monad.git#develop"
+  },
+  "devDependencies": {
   }
 }

@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^3.10.1",
     "pario-monad": "git+https://github.com/TCooper8/pario-monad.git#develop"
   },
   "devDependencies": {
+    "mocha": "^2.3.3"
   }
 }
